@@ -50,6 +50,18 @@ minetest.register_node("cottages:feldweg", {
 	is_ground_content = false,
 })
 
+-- a nice dirt road corner for small villages or paths to fields
+minetest.register_node("cottages:feldweg_turn", {
+        description = S("dirt road turn"),
+        tiles = {"cottages_feldweg_turn.png","default_dirt.png", "default_dirt.png^default_grass_side.png"},
+	paramtype2 = "facedir",
+	groups = {snappy=2,choppy=2,oddly_breakable_by_hand=2},
+	legacy_facedir_simple = true,
+        groups = {crumbly=3},
+        sounds = default.node_sound_dirt_defaults,
+	is_ground_content = false,
+})
+
 
 -- people didn't use clay for houses; they did build with loam
 minetest.register_node("cottages:loam", {
